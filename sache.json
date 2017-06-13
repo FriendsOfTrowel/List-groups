@@ -1,0 +1,9 @@
+{
+  "name": "trowel-list-groups",
+  "description": "The official Trowel Component for list-groups",
+  "tags": [
+    "ui",
+    "trowel",
+    "list-groups"
+  ]
+}

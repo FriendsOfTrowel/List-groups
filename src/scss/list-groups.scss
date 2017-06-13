@@ -1,0 +1,62 @@
+/**
+ * List-groups
+ */
+
+@import 'utils/syntaxes';
+@import 'utils/trowel-variables';
+@import 'utils/item-margin';
+
+
+$listgroup--selector: selector(new 'list-group' with $listgroups--syntax);
+
+@include statement($listgroup--selector, (
+  ('list-style', none),
+  ('padding-left', 0),
+  ('display', flex),
+  ('flex-direction', column),
+  ('font-size', $listgroups--font-size),
+  ('font-family', $listgroups--font-family),
+  ('font-weight', $listgroups--font-weight),
+  ('text-transform', $listgroups--text-transform),
+  ('letter-spacing', $listgroups--letter-spacing),
+  ('line-height', $listgroups--line-height),
+  ('text-align', $listgroups--text-align),
+  ('text-decoration', $listgroups--text-decoration),
+  ('margin', $listgroups--margin),
+  ('border-radius', $listgroups--border-radius),
+  ('color', $listgroups--color),
+  ('box-shadow', $listgroups--box-shadow),
+  ('background', $listgroups--background),
+  ('background-color', $listgroups--background-color),
+  ('max-width', $listgroups--max-width),
+));
+
+
+$listgroup-item--selector: selector(set $listgroup--selector element 'item');
+
+@include statement($listgroup-item--selector, (
+  ('position', relative),
+  ('margin-bottom', 0, ':last-child'),
+  ('@include listgroups-item--margin-bottom', $listgroups-item--border-width),
+  ('font-size', $listgroups-item--font-size),
+  ('font-family', $listgroups-item--font-family),
+  ('font-weight', $listgroups-item--font-weight),
+  ('text-transform', $listgroups-item--text-transform),
+  ('letter-spacing', $listgroups-item--letter-spacing),
+  ('line-height', $listgroups-item--line-height),
+  ('text-align', $listgroups-item--text-align),
+  ('text-decoration', $listgroups-item--text-decoration),
+  ('border-width', $listgroups-item--border-width),
+  ('border-style', $listgroups-item--border-style),
+  ('border-color', $listgroups-item--border-color),
+  ('color', $listgroups-item--color),
+  ('box-shadow', $listgroups-item--box-shadow),
+  ('background', $listgroups-item--background),
+  ('background-color', $listgroups-item--background-color),
+  ('padding', $listgroups-item--padding),
+  ('z-index', $listgroups-item--z-index),
+  ('border-top-right-radius', $listgroups-item--border-radius, ':first-child'),
+  ('border-top-left-radius', $listgroups-item--border-radius, ':first-child'),
+  ('border-bottom-right-radius', $listgroups-item--border-radius, ':last-child'),
+  ('border-bottom-left-radius', $listgroups-item--border-radius, ':last-child'),
+));

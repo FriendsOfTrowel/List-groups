@@ -1,0 +1,5 @@
+@function listgroups-item--margin-bottom($border-width, $flags) {
+  @return (
+    ('margin-bottom', $border-width * -1, $flags),
+  );
+}

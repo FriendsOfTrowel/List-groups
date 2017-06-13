@@ -1,0 +1,63 @@
+$listgroups--font-size: (
+  'default': 1rem,
+  '-xs': trwl-theme-size('xs'),
+  '-sm': trwl-theme-size('sm'),
+  '-lg': trwl-theme-size('lg'),
+) !default;
+$listgroups--font-family: trwl-theme('font-family') !default;
+$listgroups--font-weight: null !default;
+$listgroups--text-transform: null !default;
+$listgroups--letter-spacing: null !default;
+$listgroups--line-height: trwl-theme('line-height') !default;
+$listgroups--text-align: null !default;
+$listgroups--text-decoration: null !default;
+$listgroups--margin: 0 0 1em !default;
+$listgroups--border-radius: null !default;
+$listgroups--color: null !default;
+$listgroups--box-shadow: null !default;
+$listgroups--background: null !default;
+$listgroups--background-color: null !default;
+$listgroups--max-width: null !default;
+
+$listgroups-item--font-size: null !default;
+$listgroups-item--font-family: null !default;
+$listgroups-item--font-weight: null !default;
+$listgroups-item--text-transform: null !default;
+$listgroups-item--letter-spacing: null !default;
+$listgroups-item--line-height: null !default;
+$listgroups-item--text-align: null !default;
+$listgroups-item--text-decoration: null !default;
+$listgroups-item--border-width: 1px !default;
+$listgroups-item--border-style: trwl-theme('border-style') !default;
+$listgroups-item--border-color: (
+  'default': trwl-theme-color('gray-dark'),
+  '~primary': darken(trwl-theme-color('primary'), 10%),
+  '~success': darken(trwl-theme-color('success'), 10%),
+  '~warning': darken(trwl-theme-color('warning'), 10%),
+  '~danger': darken(trwl-theme-color('danger'), 10%),
+) !default;
+$listgroups-item--border-radius: trwl-theme('border-radius') !default;
+$listgroups-item--color: (
+  '~primary': rgb(255, 255, 255),
+) !default;
+$listgroups-item--box-shadow: null !default;
+$listgroups-item--background: null !default;
+$listgroups-item--background-color: (
+  'default': rgb(255, 255, 255),
+  '~primary': trwl-theme-color('primary'),
+  '~success': trwl-theme-color('success'),
+  '~warning': trwl-theme-color('warning'),
+  '~danger': trwl-theme-color('danger'),
+) !default;
+$listgroups-item--padding: trwl-theme('padding-y') trwl-theme('padding-x') !default;
+$listgroups-item--z-index: ( // (1)
+  '~primary': 1,
+  '~success': 1,
+  '~warning': 1,
+  '~danger': 1,
+) !default;
+
+// (1) when you setup a `~` flag on the `$listgroups-item--border-color`
+// variable, reproduce the same flag on the `$listgroups-item--z-index` with the
+// value of `1`. This makes sure that the border with the custom color is on
+// first plan.
